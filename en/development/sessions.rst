@@ -17,10 +17,12 @@ level ``Session`` key, and a number of options are available:
 
 * ``Session.cookie`` - Change the name of the session cookie.
 
-* ``Session.timeout`` - The number of *minutes* you want sessions to last.
+* ``Session.timeout`` - Set the number of *minutes* before CakePHP's internal processes expire the session.
+  This value affects ``Session.autoRegenerate`` (below), and is handled by CakeSession.
 
-* ``Session.cookieTimeout`` - The number of *minutes* you want sessions to last.
-  If this is undefined, the value from ``Session.timeout`` will be used.
+* ``Session.cookieTimeout`` - Set the number of *minutes* you want the session cookie to last.
+  If this is undefined, this will use the same value as ``Session.timeout``.
+  This value affects session handling and expiry for PHP itself.
 
 * ``Session.checkAgent`` - Should the user agent be checked, on each request.  If
   the useragent does not match the session will be destroyed.
