@@ -69,6 +69,7 @@ methods of the HtmlHelper and how to use them.
 .. php:method:: css(mixed $path, array $options = array())
 
     .. versionchanged:: 2.4
+        The ``$rel`` parameter was removed in favor of a new ``rel`` key in the ``$options`` array.
 
     :param mixed $path: Either a string of the css file to link, or an array with multiple files
     :param array $options: An array of options or :term:`html attributes`.
